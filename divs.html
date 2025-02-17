@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Contenedor principal */
+        .main-box {
+            background-color: lightgrey;
+            width: 500px;
+            border: 15px solid green;
+            padding: 20px;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            height: 400px;
+        }
+
+        /* Divisiones internas */
+        .top-bottom-container {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        /* Parte superior */
+        .top {
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin-bottom: 10px;
+            flex: 1;
+        }
+
+        /* Parte inferior */
+        .bottom {
+            background-color: #d3d3d3;
+            padding: 20px;
+            margin-top: 10px;
+            flex: 1;
+            display: flex;
+            justify-content: space-between; /* Distribuye los botones */
+            align-items: center; /* Centra los botones verticalmente */
+        }
+
+        /* Contenedor que divide el lado izquierdo */
+        .left-divider-container {
+            display: flex;
+            flex-grow: 1;
+        }
+
+        /* Lado izquierdo */
+        .left {
+            background-color: #e0e0e0;
+            width: 100px;
+            padding: 10px;
+            margin-right: 10px;
+            flex: 0;
+        }
+
+        /* Lado derecho */
+        .right {
+            background-color: #ffffff;
+            padding: 10px;
+            flex-grow: 1;
+        }
+
+        /* Estilo para los botones */
+        .button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Cuadro con divisiones internas</h2>
+
+<div class="main-box">
+    <!-- Contenedor para la parte superior e inferior -->
+    <div class="top-bottom-container">
+        <!-- Parte superior -->
+        <div class="top">Parte superior</div>
+
+        <!-- Parte inferior -->
+        <div class="bottom">
+            <button class="button">Botón 1</button>
+            <button class="button">Botón 2</button>
+            <button class="button">Botón 3</button>
+        </div>
+    </div>
+
+    <!-- Contenedor para la división izquierda -->
+    <div class="left-divider-container">
+        <!-- Lado izquierdo -->
+        <div class="left">Lado izquierdo</div>
+
+        <!-- Lado derecho -->
+        <div class="right">Contenido derecho</div>
+    </div>
+</div>
+
+</body>
+</html>
